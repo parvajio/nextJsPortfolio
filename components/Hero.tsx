@@ -1,22 +1,27 @@
-import React from 'react'
-import { Spotlight } from './ui/spotlight-new'
+import React from "react";
+import { Spotlight } from "./ui/spotlight-new";
 
 const Hero = () => {
   return (
-    <div className='pb-20 pt-36'>
-        <Spotlight
-      />
-      <div className=" p-4 max-w-7xl  mx-auto relative z-10  w-full pt-20 md:pt-0">
-        <h1 className="text-4xl md:text-7xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
-          Spotlight <br /> which is not overused.
-        </h1>
-        <p className="mt-4 font-normal text-base text-neutral-300 max-w-lg text-center mx-auto">
-          A subtle yet effective spotlight effect, because the previous version
-          is used a bit too much these days.
-        </p>
+    <div className="pb-20 pt-36 h-screen">
+      <Spotlight />
+      <div className="flex flex-col justify-center items-center">
+        <div>
+          <p>
+            Hi, I am
+            <span> Parvaj </span>
+            Mosharof
+          </p>
+        </div>
+        <div className="relative border w-full flex justify-center">
+          <p className="text-7xl w-[90%] text-center">Developer</p>
+          <div className="absolute top-0 left-0">
+            web
+          </div>
+        </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

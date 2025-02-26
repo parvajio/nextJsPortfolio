@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,7 +15,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Parvaj's Portfolio",
-  description: "Md. Parvaj Mosharof – a passionate web developer skilled in JavaScript, React, Node.js, and modern web technologies. Explore my projects, skills, and experiences in web development, competitive programming, and software engineering.",
+  description:
+    "Md. Parvaj Mosharof – a passionate web developer skilled in JavaScript, React, Node.js, and modern web technologies. Explore my projects, skills, and experiences in web development, competitive programming, and software engineering.",
 };
 
 export default function RootLayout({
@@ -27,7 +29,14 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
