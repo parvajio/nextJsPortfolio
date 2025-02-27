@@ -21,13 +21,18 @@ export const TextRevealCard = ({
   const [localWidth, setLocalWidth] = useState(0);
   const [isMouseOver, setIsMouseOver] = useState(false);
 
-  useEffect(() => {
+  const updateDimensions = () => {
     if (cardRef.current) {
-      const { left, width: localWidth } =
-        cardRef.current.getBoundingClientRect();
+      const { left, width: localWidth } = cardRef.current.getBoundingClientRect();
       setLeft(left);
       setLocalWidth(localWidth);
     }
+  };
+
+  useEffect(() => {
+    updateDimensions();
+    window.addEventListener("resize", updateDimensions);
+    return () => window.removeEventListener("resize", updateDimensions);
   }, []);
 
   function mouseMoveHandler(event: any) {
@@ -67,13 +72,13 @@ export const TextRevealCard = ({
       onTouchMove={touchMoveHandler}
       ref={cardRef}
       className={cn(
-        "bg-[#1d1c20] border border-white/[0.08] w-[40rem] rounded-lg p-8 relative overflow-hidden",
+        "w-full rounded-lg relative overflow-hidden", // Changed from w-[40rem] to w-full
         className
       )}
     >
       {children}
 
-      <div className="h-40  relative flex items-center overflow-hidden">
+      <div className="relative flex items-center overflow-hidden">
         <motion.div
           style={{
             width: "100%",
@@ -89,17 +94,18 @@ export const TextRevealCard = ({
                 }
           }
           transition={isMouseOver ? { duration: 0 } : { duration: 0.4 }}
-          className="absolute bg-[#1d1c20] z-20  will-change-transform"
+          className="absolute bg-[#000319] z-20 will-change-transform"
         >
           <p
             style={{
               textShadow: "4px 4px 15px rgba(0,0,0,0.5)",
             }}
-            className="text-base sm:text-[3rem] py-10 font-bold text-white bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-300"
+            className="text-9xl py-10 font-bold text-white-100 bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-300 text-center"
           >
             {revealText}
           </p>
         </motion.div>
+
         <motion.div
           animate={{
             left: `${widthPercentage}%`,
@@ -107,14 +113,16 @@ export const TextRevealCard = ({
             opacity: widthPercentage > 0 ? 1 : 0,
           }}
           transition={isMouseOver ? { duration: 0 } : { duration: 0.4 }}
-          className="h-40 w-[8px] bg-gradient-to-b from-transparent via-neutral-800 to-transparent absolute z-50 will-change-transform"
+          className="h-40 w-[8px] bg-gradient-to-b from-transparent via-neutral-500 to-transparent absolute z-50 will-change-transform"
         ></motion.div>
 
-        <div className=" overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,white,transparent)]">
-          <p className="text-base sm:text-[3rem] py-10 font-bold bg-clip-text text-transparent bg-[#323238]">
-            {text}
-          </p>
-          <MemoizedStars />
+        <div className="w-full flex justify-center">
+          <div className="overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,white,transparent)]">
+            <p className="text-9xl py-10 font-bold bg-clip-text text-transparent bg-[#9a9ac283]">
+              {text}
+            </p>
+            <MemoizedStars />
+          </div>
         </div>
       </div>
     </div>
