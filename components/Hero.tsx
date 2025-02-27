@@ -3,6 +3,7 @@ import { Spotlight } from "./ui/spotlight-new";
 import RevealText from "./RevealText";
 import { ColourfulText } from "./ui/colourful-text";
 import { FlipWords } from "./ui/flip-words";
+import { HeroHighlight, Highlight } from "./ui/hero-highlight";
 
 const Hero = () => {
 
@@ -29,8 +30,13 @@ const Hero = () => {
 
         {/* work  */}
 
-        <div className="text-blue-100 text-center">
-            <span className="text-xl">Crafting <FlipWords words={words}></FlipWords> </span><br /> Web Solutions with Next.js & Modern Technologies.
+        <div className="text-blue-100 text-center tracking-wider mb-2">
+            <span className="text-xl">Crafting <FlipWords words={words}></FlipWords> </span><br /> 
+          </div>
+          <div>
+          <Highlight className="p-2">
+                    Web Solution
+              </Highlight> with Next.js & Modern Technologies.
           </div>
       </div>
     </div>

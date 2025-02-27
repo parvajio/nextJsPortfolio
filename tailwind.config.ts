@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
-const svgToDataUri = require("mini-svg-data-uri");
+import svgToTinyDataUri from "mini-svg-data-uri";
+// const svgToDataUri = require("mini-svg-data-uri");
 const {
   default: flattenColorPalette,
 } = require("tailwindcss/lib/util/flattenColorPalette");
@@ -54,7 +55,7 @@ export default {
       matchUtilities(
         {
           "bg-dot-thick": (value: any) => ({
-            backgroundImage: `url("${svgToDataUri(
+            backgroundImage: `url("${svgToTinyDataUri(
               `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" fill="none"><circle fill="${value}" id="pattern-circle" cx="10" cy="10" r="2.5"></circle></svg>`
             )}")`,
           }),
