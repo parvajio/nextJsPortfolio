@@ -2,10 +2,14 @@ import React from "react";
 import { Spotlight } from "./ui/spotlight-new";
 import RevealText from "./RevealText";
 import { ColourfulText } from "./ui/colourful-text";
+import { FlipWords } from "./ui/flip-words";
 
 const Hero = () => {
+
+  const words= ["Modern", "High-Performance", "Scalable"]
+
   return (
-    <div className="pb-20 pt-36 h-screen">
+    <div className="flex flex-col justify-center h-screen">
       <Spotlight />
       <div className="flex flex-col justify-center items-center text-xl">
         {/* name section  */}
@@ -20,13 +24,13 @@ const Hero = () => {
         {/* developer */}
         <div className="relative w-full flex justify-center">
           <RevealText></RevealText>
-          <div className="absolute -top-5 left-0">web</div>
+          <div className="absolute top-12 left-16 text-3xl text-blue-100"></div>
         </div>
 
         {/* work  */}
 
-        <div className="bg-clip-text bg-no-repeat text-transparent bg-gradient-to-r py-4 from-purple-500 via-violet-500 to-pink-500 [text-shadow:0_0_rgba(0,0,0,0.1)] text-center">
-            <span className="">Crafting Modern, High-Performance & Scalable <br /> Web Solutions with Next.js & Modern Technologies.</span>
+        <div className="text-blue-100 text-center">
+            <span className="text-xl">Crafting <FlipWords words={words}></FlipWords> </span><br /> Web Solutions with Next.js & Modern Technologies.
           </div>
       </div>
     </div>
