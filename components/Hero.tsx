@@ -4,6 +4,7 @@ import RevealText from "./RevealText";
 import { ColourfulText } from "./ui/colourful-text";
 import { FlipWords } from "./ui/flip-words";
 import { HeroHighlight, Highlight } from "./ui/hero-highlight";
+import { Cover } from "./ui/cover";
 
 const Hero = () => {
 
@@ -36,7 +37,7 @@ const Hero = () => {
           <div>
           <Highlight className="p-2">
                     Web Solution
-              </Highlight> with Next.js & Modern Technologies.
+              </Highlight> with <Cover>Next.js & Modern Technologies.</Cover>
           </div>
       </div>
     </div>
