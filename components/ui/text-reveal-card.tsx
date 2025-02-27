@@ -78,7 +78,7 @@ export const TextRevealCard = ({
     >
       {children}
 
-      <div className="relative flex items-center overflow-hidden">
+      <div className="relative flex items-center overflow-hidden h-52">
         <motion.div
           style={{
             width: "100%",
@@ -118,7 +118,7 @@ export const TextRevealCard = ({
 
         <div className="w-full flex justify-center">
           <div className="overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,white,transparent)]">
-            <p className="text-9xl py-10 font-bold bg-clip-text text-transparent bg-[#9a9ac283]">
+            <p className="text-[10rem] py-14 font-bold bg-clip-text text-transparent bg-[#9a9ac283]">
               {text}
             </p>
             <MemoizedStars />
