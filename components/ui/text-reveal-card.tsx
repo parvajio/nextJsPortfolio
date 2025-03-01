@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef, useState, memo } from "react";
+import React, { useEffect, useRef,  memo } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import { cn } from "@/lib/utils";
