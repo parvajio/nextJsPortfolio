@@ -1,13 +1,13 @@
 import { Box, Lock, Search, Settings, Sparkles } from "lucide-react";
 import GridItem from "./GridItem";
-import { backend, frontend, people } from "@/lib/skillsArray";
+import { backend, frontend} from "@/lib/skillsArray";
 
 const Skills = () => {
 
    
 
   return (
-    <div className="flex flex-col justify-center">
+    <div className="flex flex-col justify-center mt-20">
       <h1 className="text-5xl font-bold text-blue-100 text-center mb-2">Skills</h1>
       {/* gradient */}
       <div className="w-[40rem] relative mb-10 mx-auto">

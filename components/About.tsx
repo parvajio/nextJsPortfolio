@@ -18,12 +18,12 @@ const About = () => {
       </div>
       {/* about text  */}
 
-      <p className="w-1/2 text-sm">
+      <div className="w-1/2 text-sm">
         <TextGenerateEffect words={text1}></TextGenerateEffect>
         {/* <TextGenerateEffect words={text2}></TextGenerateEffect>
         <TextGenerateEffect words={text3}></TextGenerateEffect>
         <TextGenerateEffect words={text4}></TextGenerateEffect> */}
-      </p>
+      </div>
     </div>
   );
 };
