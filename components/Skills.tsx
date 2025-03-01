@@ -1,3 +1,4 @@
+"use client"
 import { Box, Lock, Search, Settings, Sparkles } from "lucide-react";
 import GridItem from "./GridItem";
 import { backend, frontend} from "@/lib/skillsArray";
