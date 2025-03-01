@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import {
   motion,
   useTransform,
@@ -9,16 +9,16 @@ import {
   useSpring,
 } from "framer-motion";
 
-export const AnimatedTooltip = ({
-  items,
-}: {
-  items: {
+interface AnimatedTooltipProps {
+  items: Array<{
     id: number;
     name: string;
-    designation: string;
+    description: string;
     image: string;
-  }[];
-}) => {
+  }>;
+}
+
+const AnimatedTooltip: React.FC<AnimatedTooltipProps> = ({ items }) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const springConfig = { stiffness: 100, damping: 5 };
   const x = useMotionValue(0); // going to set this value on mouse move
@@ -37,12 +37,14 @@ export const AnimatedTooltip = ({
     x.set(event.nativeEvent.offsetX - halfWidth); // set the x value, which is then used in transform and rotate
   };
 
+  const tooltipRef = useRef<HTMLDivElement | null>(null);
+
   return (
-    <>
+    <div ref={tooltipRef}>
       {items.map((item) => (
         <div
           className="-mr-1  relative group"
-          key={item.name}
+          key={item.id}
           onMouseEnter={() => setHoveredIndex(item.id)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
@@ -73,7 +75,7 @@ export const AnimatedTooltip = ({
                 <div className="font-bold text-white relative z-30 text-base">
                   {item.name}
                 </div>
-                <div className="text-white text-xs">{item.designation}</div>
+                <div className="text-white text-xs">{item.description}</div>
               </motion.div>
             )}
           </AnimatePresence>
@@ -90,6 +92,8 @@ export const AnimatedTooltip = ({
           </div>
         </div>
       ))}
-    </>
+    </div>
   );
 };
+
+export default AnimatedTooltip;
