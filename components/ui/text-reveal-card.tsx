@@ -1,131 +1,49 @@
 "use client";
 import React, { useEffect, useRef, useState, memo } from "react";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import { cn } from "@/lib/utils";
+import { useInView } from "react-intersection-observer";
 
-export const TextRevealCard = ({
-  text,
-  revealText,
-  children,
-  className,
-}: {
+type TextRevealCardProps = {
   text: string;
-  revealText: string;
-  children?: React.ReactNode;
   className?: string;
-}) => {
-  const [widthPercentage, setWidthPercentage] = useState(0);
-  const cardRef = useRef<HTMLDivElement | any>(null);
-  const [left, setLeft] = useState(0);
-  const [localWidth, setLocalWidth] = useState(0);
-  const [isMouseOver, setIsMouseOver] = useState(false);
+};
 
-  const updateDimensions = () => {
-    if (cardRef.current) {
-      const { left, width: localWidth } = cardRef.current.getBoundingClientRect();
-      setLeft(left);
-      setLocalWidth(localWidth);
-    }
-  };
+export const TextRevealCard = ({ text, className }: TextRevealCardProps) => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+  const textRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    updateDimensions();
-    window.addEventListener("resize", updateDimensions);
-    return () => window.removeEventListener("resize", updateDimensions);
-  }, []);
-
-  function mouseMoveHandler(event: any) {
-    event.preventDefault();
-
-    const { clientX } = event;
-    if (cardRef.current) {
-      const relativeX = clientX - left;
-      setWidthPercentage((relativeX / localWidth) * 100);
+    if (inView) {
+      controls.start("visible");
     }
-  }
+  }, [controls, inView]);
 
-  function mouseLeaveHandler() {
-    setIsMouseOver(false);
-    setWidthPercentage(0);
-  }
-  function mouseEnterHandler() {
-    setIsMouseOver(true);
-  }
-  function touchMoveHandler(event: React.TouchEvent<HTMLDivElement>) {
-    event.preventDefault();
-    const clientX = event.touches[0]!.clientX;
-    if (cardRef.current) {
-      const relativeX = clientX - left;
-      setWidthPercentage((relativeX / localWidth) * 100);
-    }
-  }
-
-  const rotateDeg = (widthPercentage - 50) * 0.1;
   return (
-    <div
-      onMouseEnter={mouseEnterHandler}
-      onMouseLeave={mouseLeaveHandler}
-      onMouseMove={mouseMoveHandler}
-      onTouchStart={mouseEnterHandler}
-      onTouchEnd={mouseLeaveHandler}
-      onTouchMove={touchMoveHandler}
-      ref={cardRef}
-      className={cn(
-        "w-full rounded-lg relative overflow-hidden", // Changed from w-[40rem] to w-full
-        className
-      )}
+    <motion.div
+      ref={ref}
+      className={cn("relative overflow-hidden", className)}
+      initial="hidden"
+      animate={controls}
+      variants={{
+        hidden: { opacity: 0, y: 20 },
+        visible: { opacity: 1, y: 0 },
+      }}
+      transition={{ duration: 0.5 }}
     >
-      {children}
-
-      <div className="relative flex items-center overflow-hidden h-52">
-        <motion.div
-          style={{
-            width: "100%",
-          }}
-          animate={
-            isMouseOver
-              ? {
-                  opacity: widthPercentage > 0 ? 1 : 0,
-                  clipPath: `inset(0 ${100 - widthPercentage}% 0 0)`,
-                }
-              : {
-                  clipPath: `inset(0 ${100 - widthPercentage}% 0 0)`,
-                }
-          }
-          transition={isMouseOver ? { duration: 0 } : { duration: 0.4 }}
-          className="absolute bg-[#000319] z-20 will-change-transform"
+      <div ref={textRef} className="absolute inset-0 flex items-center justify-center">
+        <motion.span
+          className="text-4xl font-bold dark:text-white text-black"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
         >
-          <p
-            style={{
-              textShadow: "4px 4px 15px rgba(0,0,0,0.5)",
-            }}
-            className="text-9xl py-10 font-bold text-white-100 bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-300 text-center"
-          >
-            {revealText}
-          </p>
-        </motion.div>
-
-        <motion.div
-          animate={{
-            left: `${widthPercentage}%`,
-            rotate: `${rotateDeg}deg`,
-            opacity: widthPercentage > 0 ? 1 : 0,
-          }}
-          transition={isMouseOver ? { duration: 0 } : { duration: 0.4 }}
-          className="h-40 w-[8px] bg-gradient-to-b from-transparent via-neutral-500 to-transparent absolute z-50 will-change-transform"
-        ></motion.div>
-
-        <div className="w-full flex justify-center">
-          <div className="overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,white,transparent)]">
-            <p className="text-[10rem] py-14 font-bold bg-clip-text text-transparent bg-[#9a9ac283]">
-              {text}
-            </p>
-            <MemoizedStars />
-          </div>
-        </div>
+          {text}
+        </motion.span>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
