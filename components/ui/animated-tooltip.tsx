@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import {
   motion,
   useTransform,
@@ -9,16 +9,16 @@ import {
   useSpring,
 } from "framer-motion";
 
-interface AnimatedTooltipProps {
-  items: Array<{
+export const AnimatedTooltip = ({
+  items,
+}: {
+  items: {
     id: number;
     name: string;
     designation: string;
     image: string;
-  }>;
-}
-
-export const AnimatedTooltip: React.FC<AnimatedTooltipProps> = ({ items }) => {
+  }[];
+}) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const springConfig = { stiffness: 100, damping: 5 };
   const x = useMotionValue(0); // going to set this value on mouse move
@@ -37,14 +37,12 @@ export const AnimatedTooltip: React.FC<AnimatedTooltipProps> = ({ items }) => {
     x.set(event.nativeEvent.offsetX - halfWidth); // set the x value, which is then used in transform and rotate
   };
 
-  const tooltipRef = useRef<HTMLDivElement | null>(null); // Replace 'any' with 'HTMLDivElement | null'
-
   return (
-    <div ref={tooltipRef}>
+    <>
       {items.map((item) => (
         <div
-          className="-mr-1  relative group"
-          key={item.id}
+          className="-mr-2  relative group w-fit"
+          key={item.name}
           onMouseEnter={() => setHoveredIndex(item.id)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
@@ -79,21 +77,19 @@ export const AnimatedTooltip: React.FC<AnimatedTooltipProps> = ({ items }) => {
               </motion.div>
             )}
           </AnimatePresence>
-          <div className="bg-gray-200 rounded-full">
+          <div className="border-white border-2 rounded-full w-fit">
 
           <Image
             onMouseMove={handleMouseMove}
-            height={100}
-            width={100}
+            height={80}
+            width={80}
             src={item.image}
             alt={item.name}
-            className="object-cover !m-0 !p-0 object-top rounded-full h-10 w-10 border-2 group-hover:scale-105 group-hover:z-30 border-white  relative transition duration-500"
+            className="object-cover !m-0 !p-0 object-top rounded-full h-9 w-9 group-hover:scale-105 group-hover:z-30 bg-violet-200 relative transition duration-500"
           />
           </div>
         </div>
       ))}
-    </div>
+    </>
   );
 };
-
-export default AnimatedTooltip;

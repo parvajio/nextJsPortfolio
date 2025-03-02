@@ -11,7 +11,7 @@ const AnimatedTooltipPreview: React.FC<AnimatedTooltipPreviewProps> = ({ skills 
 
 
   return (
-    <div className="flex flex-row items-center justify-center flex-wrap mb-10 w-full">
+    <div className="justify-center flex ">
       <AnimatedTooltip items={skills} />
     </div>
   )
