@@ -1,7 +1,12 @@
 import React from 'react'
 import { AnimatedTooltip } from './ui/animated-tooltip'
+import { Skill } from './GridItem'; 
 
-const AnimatedTooltipPreview = ({skills=[]}) => {
+interface AnimatedTooltipPreviewProps {
+  skills: Skill[];
+}
+
+const AnimatedTooltipPreview: React.FC<AnimatedTooltipPreviewProps> = ({ skills }) => {
 
 
 

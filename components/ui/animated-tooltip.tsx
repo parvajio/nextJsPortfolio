@@ -13,7 +13,7 @@ interface AnimatedTooltipProps {
   items: Array<{
     id: number;
     name: string;
-    description: string;
+    designation: string;
     image: string;
   }>;
 }
@@ -75,7 +75,7 @@ export const AnimatedTooltip: React.FC<AnimatedTooltipProps> = ({ items }) => {
                 <div className="font-bold text-white relative z-30 text-base">
                   {item.name}
                 </div>
-                <div className="text-white text-xs">{item.description}</div>
+                <div className="text-white text-xs">{item.designation}</div>
               </motion.div>
             )}
           </AnimatePresence>
