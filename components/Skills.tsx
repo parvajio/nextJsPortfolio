@@ -1,7 +1,7 @@
 "use client"
 import { Box, Lock, Search, Settings, Sparkles } from "lucide-react";
 import GridItem from "./GridItem";
-import { backend, frontend} from "@/lib/skillsArray";
+// import { backend, frontend} from "@/lib/skillsArray";
 
 const Skills = () => {
 
@@ -25,7 +25,7 @@ const Skills = () => {
           icon={<Box className="h-4 w-4 text-black dark:text-neutral-400" />}
           title="Front-end"
           description="Running out of copy so I'll write anything."
-          items={frontend}
+          // items={frontend}
         />
 
         <GridItem
@@ -35,7 +35,7 @@ const Skills = () => {
           }
           title="Back-end"
           description="Yes, it's true. I'm not even kidding. Ask my mom if you don't believe me."
-          items={backend}
+          // items={backend}
         />
 
         <GridItem
