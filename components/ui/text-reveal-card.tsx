@@ -7,10 +7,15 @@ import { useInView } from "react-intersection-observer";
 
 type TextRevealCardProps = {
   text: string;
+  revealText: string;
+  children?: React.ReactNode;
   className?: string;
 };
 
-export const TextRevealCard = ({ text, className }: TextRevealCardProps) => {
+export const TextRevealCard = ({ text,
+  revealText,
+  children,
+  className,}: TextRevealCardProps) => {
   const controls = useAnimation();
   const [ref, inView] = useInView();
   const textRef = useRef<HTMLDivElement>(null);
