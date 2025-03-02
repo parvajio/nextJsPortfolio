@@ -2,7 +2,7 @@
 // import Hero from "@/components/Hero";
 import { Projects } from "@/components/Projects";
 import Skills from "@/components/Skills";
-import Remote from "@/components/ui/Remote";
+// import Remote from "@/components/ui/Remote";
 
 export default function Home() {
   return (
@@ -12,7 +12,7 @@ export default function Home() {
         {/* <About></About> */}
         <Projects></Projects>
         <Skills></Skills>
-        <Remote></Remote>
+        {/* <Remote></Remote> */}
       </div>
     </main>
   );
