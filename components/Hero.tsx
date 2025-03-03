@@ -15,10 +15,10 @@ const Hero = () => {
       <div className="flex flex-col justify-center items-center text-xl">
         {/* name section  */}
         <div>
-          <p className=" tracking-widest">
+          <p className=" tracking-widest text-white-100">
             Hi, I&apos;m{" "}
             <span className="font-bold">
-              <ColourfulText text="Parvaj Mosharof"></ColourfulText>
+              <ColourfulText text="Parvaj Mosharof" ></ColourfulText>
             </span>
           </p>
         </div>
