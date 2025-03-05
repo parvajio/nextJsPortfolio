@@ -10,7 +10,7 @@ const Hero = () => {
   const words = ["Modern", "High-Performance", "Scalable"];
 
   return (
-    <div className="flex flex-col justify-center h-screen">
+    <div className="flex flex-col justify-center h-screen overflow-hidden relative w-full">
       <Spotlight />
       <div className="flex flex-col justify-center items-center text-xl">
         {/* name section  */}
