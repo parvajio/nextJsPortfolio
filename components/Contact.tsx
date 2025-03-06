@@ -5,7 +5,7 @@ import Conect from "./Conect";
 
 const Contact = () => {
   return (
-    <div className="w-full flex flex-col items-center mx-10">
+    <div className="w-full flex flex-col items-center my-10">
       <h1 className="font-bold text-white text-4xl md:text-5xl text-center w-full lg:max-w-[45vw]">
         Ready to take <span className="text-[#CBACF9]">your</span> digital
         presence to the next level?
