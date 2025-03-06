@@ -3,6 +3,7 @@ import { useMotionValue } from "framer-motion";
 import React, { useState, useEffect } from "react";
 import { useMotionTemplate, motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 export const EvervaultCard = ({
   text,
@@ -48,8 +49,9 @@ export const EvervaultCard = ({
         />
         <div className="relative z-10 flex items-center justify-center">
           <div className="relative h-44 w-44  rounded-full flex items-center justify-center text-white font-bold text-4xl">
-            <div className="absolute w-full h-full bg-white/[0.8] dark:bg-black/[0.8] blur-sm rounded-full" />
-            <span className="dark:text-white text-black z-20">{text}</span>
+            <div className="absolute w-full h-full bg-black/[0.8] rounded-full" >
+            <Image src={"https://ik.imagekit.io/parvajio/my%20photos/wbg2.png?updatedAt=1741167504336"} alt="parvajio" width={500} height={500} className="rounded-full"></Image>
+            </div>
           </div>
         </div>
       </div>
