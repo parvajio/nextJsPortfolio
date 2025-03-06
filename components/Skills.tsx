@@ -7,6 +7,7 @@ import { SparklesCore } from "./ui/sparkles";
 const Skills = () => {
   return (
     <div className="flex flex-col justify-center mt-20 overflow-hidden max-w-7xl">
+      {/* heading  */}
       <h1 className="text-7xl font-bold text-blue-100 text-center mb-2">
         Skills
       </h1>

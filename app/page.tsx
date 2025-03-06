@@ -2,6 +2,7 @@ import About from "@/components/About";
 import Hero from "@/components/Hero";
 import { Projects } from "@/components/Projects";
 import Skills from "@/components/Skills";
+import WhatIDO from "@/components/WhatIDO";
 // import Remote from "@/components/ui/Remote";
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
         <About />
         <Projects />
         <Skills />
+        <WhatIDO></WhatIDO>
         {/* <Remote /> */}
     </main>
   );
