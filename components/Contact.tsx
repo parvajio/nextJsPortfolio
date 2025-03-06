@@ -1,4 +1,5 @@
 import React from 'react'
+import { Profile } from './Profile'
 
 const Contact = () => {
   return (
@@ -12,7 +13,7 @@ const Contact = () => {
           achieve your goals.
         </p>
 
-        
+        <Profile></Profile>
     </div>
   )
 }
