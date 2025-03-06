@@ -4,7 +4,7 @@ import { SparklesCore } from "./ui/sparkles";
 
 const WhatIDO = () => {
   return (
-    <div className="max-w-7xl mt-20">
+    <div className="sm:max-w-7xl max-w-sm mt-20">
       {/* heading  */}
       <h1 className="text-7xl font-bold text-blue-100 text-center mb-2">
         What I Do

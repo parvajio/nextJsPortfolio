@@ -6,7 +6,7 @@ import { CanvasRevealEffect } from "./ui/canvas-reveal-effect";
 
 const Approach = () => {
   return (
-    <section className="max-w-7xl py-20">
+    <section className="sm:max-w-7xl max-w-sm py-20">
       <h1 className="font-bold text-white text-4xl md:text-5xl text-center w-full">
         My <span className="text-[#CBACF9]">approach</span>
       </h1>

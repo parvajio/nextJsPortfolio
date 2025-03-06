@@ -15,7 +15,7 @@ const Contact = () => {
         your goals.
       </p>
 
-      <div className="flex w-full flex-col md:flex-row max-w-7xl gap-10 mx-auto justify-center items-center mt-10">
+      <div className="flex w-full flex-col md:flex-row sm:max-w-7xl max-w-sm gap-10 mx-auto justify-center items-center mt-10">
         
         <Mail></Mail>
         <Profile></Profile>
