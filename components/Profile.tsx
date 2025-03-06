@@ -9,7 +9,7 @@ export function Profile() {
       <Icon className="absolute h-6 w-6 -top-3 -right-3 text-white" />
       <Icon className="absolute h-6 w-6 -bottom-3 -right-3 text-white" />
 
-      <EvervaultCard text="hover" />
+      <EvervaultCard/>
 
       <h2 className="text-white mt-4 text-sm font-light">
         Hover over this card to reveal an awesome effect. Running out of copy
