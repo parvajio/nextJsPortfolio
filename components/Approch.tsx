@@ -7,11 +7,11 @@ import { CanvasRevealEffect } from "./ui/canvas-reveal-effect";
 const Approach = () => {
   return (
     <section className="max-w-7xl py-20">
-      <h1 className="font-bold text-4xl md:text-5xl text-center w-full">
+      <h1 className="font-bold text-white text-4xl md:text-5xl text-center w-full">
         My <span className="text-[#CBACF9]">approach</span>
       </h1>
       {/* remove bg-white dark:bg-black */}
-      <div className="my-20 flex flex-col lg:flex-row items-center justify-center w-full gap-5">
+      <div className="my-20 flex flex-col lg:flex-row items-center justify-center w-full gap-5 text-white">
         {/* add des prop */}
         <Card
           title="Planning & Strategy"
