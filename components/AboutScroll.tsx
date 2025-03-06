@@ -18,7 +18,7 @@ export function AboutScroll() {
 
   return (
     <div
-      className="h-[400vh] w-full rounded-md relative pt-40 overflow-clip"
+      className="h-[400vh] w-full rounded-md relative pt-32 overflow-clip"
       ref={ref}
     >
       <GoogleGeminiEffect
