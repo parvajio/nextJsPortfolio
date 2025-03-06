@@ -1,5 +1,6 @@
 import React from 'react'
 import { Profile } from './Profile'
+import Mail from './Mail'
 
 const Contact = () => {
   return (
@@ -14,6 +15,7 @@ const Contact = () => {
         </p>
 
         <Profile></Profile>
+        <Mail></Mail>
     </div>
   )
 }
