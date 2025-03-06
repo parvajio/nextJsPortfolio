@@ -12,6 +12,7 @@ const Contact = () => {
           achieve your goals.
         </p>
 
+        
     </div>
   )
 }
