@@ -4,10 +4,10 @@ import { SparklesCore } from "./ui/sparkles";
 
 const WhatIDO = () => {
   return (
-    <div className="max-w-7xl">
+    <div className="max-w-7xl mt-20">
       {/* heading  */}
       <h1 className="text-7xl font-bold text-blue-100 text-center mb-2">
-        Skills
+        What I Do
       </h1>
       {/* gradient */}
       <div className="w-[40rem] h-[8rem] relative mb-10 mx-auto">
@@ -29,7 +29,7 @@ const WhatIDO = () => {
 
         <div className="absolute inset-0 w-full h-full bg-black-100 [mask-image:radial-gradient(300px_100px_at_top,transparent_20%,white)]"></div>
       </div>
-      
+
       <div className="flex flex-wrap gap-10 justify-center">
         <GlareCard className="flex flex-col items-start justify-end py-8 px-6">
           <p className="font-bold text-white text-lg">
@@ -55,21 +55,17 @@ const WhatIDO = () => {
           </p>
         </GlareCard>
         <GlareCard className="flex flex-col items-start justify-end py-8 px-6">
-          <p className="font-bold text-white text-lg">
-            🖥️ Frontend Development
-          </p>
+          <p className="font-bold text-white text-lg">🌐 API Integration</p>
           <p className="font-normal text-base text-neutral-200 mt-4">
-            Building interactive and responsive UIs using modern technologies
-            like HTML, CSS, React.js, and Tailwind CSS.
+            Integrating RESTful APIs to enable communication between frontend
+            and backend services.
           </p>
         </GlareCard>
         <GlareCard className="flex flex-col items-start justify-end py-8 px-6">
-          <p className="font-bold text-white text-lg">
-            🖥️ Frontend Development
-          </p>
+          <p className="font-bold text-white text-lg">⚙️ Tools & Workflow</p>
           <p className="font-normal text-base text-neutral-200 mt-4">
-            Building interactive and responsive UIs using modern technologies
-            like HTML, CSS, React.js, and Tailwind CSS.
+            Skilled in Git, GitHub, VSCode, Postman, and Figma to streamline
+            development and design workflows.
           </p>
         </GlareCard>
       </div>
