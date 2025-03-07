@@ -5,7 +5,6 @@ import { ColourfulText } from "./ui/colourful-text";
 import { FlipWords } from "./ui/flip-words";
 import { Highlight } from "./ui/hero-highlight";
 import { Cover } from "./ui/cover";
-// import {TypeAnimation} from "react-type-animation"
 
 const Hero = () => {
   const words = ["Modern", "High-Performance", "Scalable"];
