@@ -2,20 +2,19 @@ import About from "@/components/About";
 import Approach from "@/components/Approch";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-// import Hero from "@/components/Hero";
+import Hero from "@/components/Hero";
 import { Projects } from "@/components/Projects";
 import Skills from "@/components/Skills";
 import WhatIDO from "@/components/WhatIDO";
 // import Remote from "@/components/ui/Remote";
+import { isMobile } from "react-device-detect";
 
 export default function Home() {
   return (
     <main className="relative bg-black-100 flex justify-center items-center flex-col mx-auto">
-      {/* <Hero /> */}
+      <Hero />
       <About />
-      <div className="hidden md:!block">
-        <Projects />
-      </div>
+      {!isMobile && <Projects />}
       <Skills />
       <WhatIDO></WhatIDO>
       <Approach></Approach>
