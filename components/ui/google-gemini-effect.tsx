@@ -25,7 +25,7 @@ export const GoogleGeminiEffect = ({
         {`A passionate web developer skilled in React, Next.js, TypeScript, and backend technologies. I love building scalable applications, exploring cloud solutions, and solving complex problems through code.`}
       </p>
 
-      <div className="w-full h-[890px] -top-52 md:-top-40 mt-4 flex items-center justify-center bg-red-transparent absolute">
+      <div className="w-full h-[890px] -top-64 md:-top-40 mt-4 flex items-center justify-center bg-red-transparent absolute">
         <button className="font-bold bg-white rounded-full md:px-4 md:py-2 px-2 py-1 md:mt-24 mt-8 z-30 md:text-base text-black text-xs  w-fit mx-auto">
           @parvajio
         </button>

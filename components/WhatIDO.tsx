@@ -10,11 +10,11 @@ const WhatIDO = () => {
         What I Do
       </h1>
       {/* gradient */}
-      <div className="w-[40rem] h-[8rem] relative mb-10 mx-auto">
-        <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
-        <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
-        <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[5px] w-1/4 blur-sm" />
-        <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-1/4" />
+      <div className="w-[20rem] md:w-[40rem] h-24 md:h-[8rem] relative mb-10 mx-auto sm:max-w-7xl max-w-sm">
+        <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-1/2 md:w-3/4 blur-sm" />
+        <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-1/2 md:w-3/4" />
+        <div className="absolute inset-x-28 md:inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[5px] w-1/3 md:w-1/4 blur-sm" />
+        <div className="absolute inset-x-28 md:inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-1/3 md:w-1/4" />
 
         {/* SPARKLES  */}
 
@@ -27,7 +27,7 @@ const WhatIDO = () => {
           particleColor="#FFFFFF"
         />
 
-        <div className="absolute inset-0 w-full h-full bg-black-100 [mask-image:radial-gradient(300px_100px_at_top,transparent_20%,white)]"></div>
+        <div className="absolute inset-0 w-full h-full bg-black-100 md:[mask-image:radial-gradient(300px_100px_at_top,transparent_20%,white)] [mask-image:radial-gradient(200px_80px_at_top,transparent_20%,white)]"></div>
       </div>
 
       <div className="flex flex-wrap gap-10 justify-center">
