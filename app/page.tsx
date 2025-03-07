@@ -11,15 +11,17 @@ import WhatIDO from "@/components/WhatIDO";
 export default function Home() {
   return (
     <main className="relative bg-black-100 flex justify-center items-center flex-col mx-auto">
-        <Hero />
-        <About />
-        {/* <Projects /> */}
-        <Skills />
-        <WhatIDO></WhatIDO>
-        <Approach></Approach>
-        <Contact></Contact>
-        <Footer></Footer>
-        {/* <Remote /> */}
+      <Hero />
+      <About />
+      <div className="hidden md:!block">
+        <Projects />
+      </div>
+      <Skills />
+      <WhatIDO></WhatIDO>
+      <Approach></Approach>
+      <Contact></Contact>
+      <Footer></Footer>
+      {/* <Remote /> */}
     </main>
   );
 }

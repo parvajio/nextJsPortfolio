@@ -26,7 +26,6 @@ const Hero = () => {
         {/* developer */}
         <div className="relative w-full flex justify-center">
           <RevealText></RevealText>
-          <div className="absolute top-12 left-16 text-3xl text-blue-100"></div>
         </div>
 
         {/* work  */}
