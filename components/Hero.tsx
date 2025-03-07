@@ -5,6 +5,7 @@ import { ColourfulText } from "./ui/colourful-text";
 import { FlipWords } from "./ui/flip-words";
 import { Highlight } from "./ui/hero-highlight";
 import { Cover } from "./ui/cover";
+// import {TypeAnimation} from "react-type-animation"
 
 const Hero = () => {
   const words = ["Modern", "High-Performance", "Scalable"];
@@ -18,7 +19,7 @@ const Hero = () => {
           <p className=" tracking-widest text-white-100">
             Hi, I&apos;m{" "}
             <span className="font-bold">
-              <ColourfulText text="Parvaj Mosharof" ></ColourfulText>
+              <ColourfulText text="Parvaj Mosharof"></ColourfulText>
             </span>
           </p>
         </div>
@@ -34,9 +35,14 @@ const Hero = () => {
           <div className="">
             Crafting <FlipWords words={words}></FlipWords>{" "}
           </div>
-          <div className="text-sm tracking-widest">
-            <Highlight className="p-2">Web Solution</Highlight> with{" "}
-            <Cover>Next.js & Modern Technologies.</Cover>
+          <div className="text-sm tracking-widest flex flex-col md:flex-row justify-center items-center gap-2">
+            <div>
+              <Highlight className="p-2">Web Solution</Highlight> with{" "}
+            </div>
+            <div className="hidden sm:!block">
+              <Cover>Next.js & Modern Technologies.</Cover>
+            </div>
+            <div className="bg-black text-white-100 p-2 rounded-md border border-black-200 sm:hidden w-fit">Next.js & Modern Technologies.</div>
           </div>
         </div>
       </div>
