@@ -81,3 +81,30 @@ export const backend = [
         image: "https://images.opencollective.com/drizzle-orm/9405e48/logo/256.png",
     }
 ];
+
+export const databases = [
+  {
+      id: 1,
+      name: "MongoDB",
+      designation: "NoSQL Document Database",
+      image: "https://img.icons8.com/?size=100&id=bosfpvRzNOG8&format=png&color=000000",
+  },
+  {
+      id: 2,
+      name: "MySQL",
+      designation: "Relational Database Management System",
+      image: "https://img.icons8.com/?size=100&id=39855&format=png&color=000000",
+  },
+  {
+      id: 3,
+      name: "PostgreSQL",
+      designation: "Advanced Relational Database System",
+      image: "https://img.icons8.com/?size=100&id=38561&format=png&color=000000",
+  },
+  {
+      id: 4,
+      name: "CRUD Operations",
+      designation: "Create, Read, Update, Delete",
+      image: "https://img.icons8.com/?size=100&id=64502&format=png&color=000000",
+  }
+];

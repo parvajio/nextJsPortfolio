@@ -4,6 +4,7 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import { Projects } from "@/components/Projects";
+import RecentProjects from "@/components/RecentProjects";
 import Skills from "@/components/Skills";
 import WhatIDO from "@/components/WhatIDO";
 
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero />
       <About />
       <Projects />
+      <RecentProjects></RecentProjects>
       <Skills />
       <WhatIDO></WhatIDO>
       <Approach></Approach>
