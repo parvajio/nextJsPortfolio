@@ -1,7 +1,7 @@
 "use client";
 import { Box, Lock, Search, Settings, Sparkles } from "lucide-react";
 import GridItem from "./GridItem";
-import { backend, databases, frontend } from "@/lib/skillsArray";
+import { backend, databases, frontend, tools } from "@/lib/skillsArray";
 import { SparklesCore } from "./ui/sparkles";
 
 const Skills = () => {
@@ -70,7 +70,7 @@ const Skills = () => {
           icon={<Search className="h-4 w-4 text-neutral-400" />}
           title="Tools"
           description="I'm writing the code as I record this, no shit."
-          
+          items={tools}
         />
       </ul>
     </div>
