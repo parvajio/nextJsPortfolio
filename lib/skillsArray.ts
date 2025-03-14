@@ -103,8 +103,22 @@ export const databases = [
   },
   {
       id: 4,
+      name: "Neon",
+      designation: "Serverless PostgreSQL Database",
+      image: "https://neon.tech/brand/neon-logomark-light-color.svg",
+  },
+  {
+      id: 5,
+      name: "Drizzle ORM",
+      designation: "TypeScript-first ORM for Databases",
+      image: "https://images.opencollective.com/drizzle-orm/9405e48/logo/256.png",
+  },
+  {
+      id: 6,
       name: "CRUD Operations",
       designation: "Create, Read, Update, Delete",
       image: "https://img.icons8.com/?size=100&id=64502&format=png&color=000000",
   }
 ];
+
+
