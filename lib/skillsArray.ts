@@ -121,4 +121,30 @@ export const databases = [
   }
 ];
 
+export const tools = [
+  {
+      id: 1,
+      name: "Git",
+      designation: "Version Control System",
+      image: "https://img.icons8.com/?size=100&id=20906&format=png&color=000000",
+  },
+  {
+      id: 2,
+      name: "GitHub",
+      designation: "Code Hosting & Collaboration",
+      image: "https://img.icons8.com/?size=100&id=12599&format=png&color=000000",
+  },
+  {
+      id: 3,
+      name: "VS Code",
+      designation: "Code Editor",
+      image: "https://img.icons8.com/?size=100&id=i19Ns28h30P4&format=png&color=000000",
+  },
+  {
+      id: 4,
+      name: "Postman",
+      designation: "API Development & Testing",
+      image: "https://img.icons8.com/?size=100&id=IoYmHUxgvrFB&format=png&color=000000"
+  }
+];
 
