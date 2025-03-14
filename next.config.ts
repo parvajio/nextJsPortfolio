@@ -20,6 +20,10 @@ const nextConfig: NextConfig = {
         protocol:"https",
         hostname:"images.opencollective.com"
       },
+      {
+        protocol:"https",
+        hostname:"neon.tech"
+      },
     ]
   }
   /* config options here */
