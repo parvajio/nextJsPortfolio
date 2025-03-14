@@ -38,7 +38,7 @@ const Skills = () => {
           area="md:[grid-area:1/1/2/7] xl:[grid-area:1/1/2/5]"
           icon={<Box className="h-4 w-4 text-neutral-400" />}
           title="Front-end"
-          description="Running out of copy so I'll write anything."
+          description="Building dynamic and interactive web applications with modern UI/UX best practices."
           items={frontend}
         />
 
@@ -46,7 +46,7 @@ const Skills = () => {
           area="md:[grid-area:1/7/2/13] xl:[grid-area:2/1/3/5]"
           icon={<Settings className="h-4 w-4 text-neutral-400" />}
           title="Back-end"
-          description="Yes, it's true. I'm not even kidding. Ask my mom if you don't believe me."
+          description="Developing scalable and efficient server-side applications with secure APIs."
           items={backend}
         />
 
@@ -54,14 +54,14 @@ const Skills = () => {
           area="md:[grid-area:2/1/3/7] xl:[grid-area:1/5/3/8]"
           icon={<Lock className="h-4 w-4 text-neutral-400" />}
           title="Learning"
-          description="It's the best money you'll ever spend"
+          description="Always exploring and learning new technologies based on project requirements and industry trends."
         />
 
         <GridItem
           area="md:[grid-area:2/7/3/13] xl:[grid-area:1/8/2/13]"
           icon={<Sparkles className="h-4 w-4 text-neutral-400" />}
           title="Database"
-          description="I'm not even kidding. Ask my mom if you don't believe me."
+          description="Designing and managing structured and unstructured databases for reliable data storage."
           items={databases}
         />
 
@@ -69,7 +69,7 @@ const Skills = () => {
           area="md:[grid-area:3/1/4/13] xl:[grid-area:2/8/3/13] rounded-3xl"
           icon={<Search className="h-4 w-4 text-neutral-400" />}
           title="Tools"
-          description="I'm writing the code as I record this, no shit."
+          description="Leveraging powerful tools for version control, API testing, and seamless development workflow."
           items={tools}
         />
       </ul>
