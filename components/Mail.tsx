@@ -87,7 +87,7 @@ const Mail = () => {
         </div>
 
         <div className="w-full flex justify-end">
-          <div className="text-xs text-white/90 italic pr-3">Let's connect</div>
+          <div className="text-xs text-white/90 italic pr-3">Let&apos;s connect</div>
         </div>
       </CardSpotlight>
     </div>
