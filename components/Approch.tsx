@@ -1,8 +1,7 @@
-'use client'
+"use client";
 import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { CanvasRevealEffect } from "./ui/canvas-reveal-effect";
-
 
 const Approach = () => {
   return (
@@ -97,10 +96,10 @@ const Card = ({
       }}
     >
       {/* change to h-10 w-10 , add opacity-30  */}
-      <Icon className="absolute h-10 w-10 -top-5 -left-5 text-white opacity-30" />
-      <Icon className="absolute h-10 w-10 -bottom-5 -left-5 text-white opacity-30" />
-      <Icon className="absolute h-10 w-10 -top-5 -right-5 text-white opacity-30" />
-      <Icon className="absolute h-10 w-10 -bottom-5 -right-5 text-white opacity-30" />
+      <Icon className="absolute h-10 w-10 -top-2 -left-2 text-white z-10" />
+      <Icon className="absolute h-10 w-10 -bottom-2 -left-2 text-white z-10" />
+      <Icon className="absolute h-10 w-10 -top-2 -right-2  text-white z-10" />
+      <Icon className="absolute h-10 w-10 -bottom-2 -right-2 text-white z-10" />
 
       <AnimatePresence>
         {hovered && (
