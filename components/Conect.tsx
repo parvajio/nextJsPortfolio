@@ -5,7 +5,7 @@ import { Icon } from "./ui/evervault-card"
 import { CardSpotlight } from "./ui/card-spotlight"
 import { Button } from "./ui/moving-border"
 import { motion } from "framer-motion"
-import { Linkedin, Github, Twitter, ArrowRight, CodeXml } from "lucide-react"
+import { Linkedin, Github, ArrowRight, CodeXml } from "lucide-react"
 
 const socialLinks = [
   {
@@ -99,7 +99,7 @@ const Connect = () => {
         <div className="w-full flex justify-center mt-6">
           <div className="text-xs text-white/40 flex items-center gap-1">
             <span className="h-1 w-1 rounded-full bg-white/40"></span>
-            <span>Let's build something amazing together</span>
+            <span>Let&apos;s build something amazing together</span>
             <span className="h-1 w-1 rounded-full bg-white/40"></span>
           </div>
         </div>
