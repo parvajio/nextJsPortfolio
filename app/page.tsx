@@ -15,18 +15,28 @@ export default function Home() {
     {
       name: "Home",
       link: "/",
-      icon: <IconHome className="h-4 w-4 text-neutral-500 dark:text-white" />,
+      icon: <IconHome className="h-4 w-4 text-white" />,
     },
     {
       name: "About",
-      link: "/about",
-      icon: <IconUser className="h-4 w-4 text-neutral-500 dark:text-white" />,
+      link: "#about",
+      icon: <IconUser className="h-4 w-4 text-white" />,
+    },
+    {
+      name: "Projects",
+      link: "#projects",
+      icon: <IconUser className="h-4 w-4 text-white" />,
+    },
+    {
+      name: "Skills",
+      link: "#skills",
+      icon: <IconUser className="h-4 w-4 text-white" />,
     },
     {
       name: "Contact",
-      link: "/contact",
+      link: "#contact",
       icon: (
-        <IconMessage className="h-4 w-4 text-neutral-500 dark:text-white" />
+        <IconMessage className="h-4 w-4 text-white" />
       ),
     },
   ];

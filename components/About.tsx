@@ -6,9 +6,9 @@ import { AboutScroll } from "./AboutScroll";
 
 const About = () => {
   return (
-    <div className="relative w-full">
+    <section id="about" className="relative w-full">
       <AboutScroll></AboutScroll>
-    </div>
+    </section>
   );
 };
 
