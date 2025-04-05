@@ -19,8 +19,8 @@ const RecentProjects = () => {
             key={item.id}
           >
             <PinContainer
-              title="visit"
-            //   href="https://twitter.com/mannupaaji"
+              title={`${item.title}`}
+              href={`${item.link}`}
             >
               <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
                 {/* <div
@@ -29,6 +29,9 @@ const RecentProjects = () => {
                 >
                   <img src="/bg.png" alt="bgimg" />
                 </div> */}
+                <p>{item.title}</p>
+                <p>{item.link}</p>
+
                 <img
                   src={item.img}
                   alt="cover"
@@ -65,7 +68,7 @@ const RecentProjects = () => {
                   ))}
                 </div> */}
 
-                <Link href={"https://librify-fqlo.vercel.app/"}>
+                <Link href={item.link}>
                   <div className="flex justify-center items-center">
                     <p className="flex lg:text-xl md:text-xs text-sm text-purple">
                       Check Live Site
