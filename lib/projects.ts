@@ -4,7 +4,7 @@ export const projects = [
       title: "Librify - University Library Management System",
       des: "A comprehensive university library management system with authentication, book borrowing, email notifications, analytics, and advanced filtering.",
       img: "https://ik.imagekit.io/parvajio/projects/librify.png?updatedAt=1740758016057",
-      link: "https://librify.web.app/",
+      link: "https://librify-fqlo.vercel.app",
     },
     {
       id: 2,

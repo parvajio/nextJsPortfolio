@@ -29,8 +29,6 @@ const RecentProjects = () => {
                 >
                   <img src="/bg.png" alt="bgimg" />
                 </div> */}
-                <p>{item.title}</p>
-                <p>{item.link}</p>
 
                 <img
                   src={item.img}
