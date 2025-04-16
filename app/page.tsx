@@ -9,6 +9,7 @@ import Skills from "@/components/Skills";
 import { FloatingNav } from "@/components/ui/floating-navbar";
 import WhatIDO from "@/components/WhatIDO";
 import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
+import { BadgeCheck, Folder } from "lucide-react";
 
 export default function Home() {
   const navItems = [
@@ -18,19 +19,14 @@ export default function Home() {
       icon: <IconHome className="h-4 w-4 text-white" />,
     },
     {
-      name: "About",
-      link: "#about",
-      icon: <IconUser className="h-4 w-4 text-white" />,
-    },
-    {
       name: "Projects",
       link: "#projects",
-      icon: <I className="h-4 w-4 text-white" />,
+      icon: <Folder className="h-4 w-4 text-white" />,
     },
     {
       name: "Skills",
       link: "#skills",
-      icon: <IconUser className="h-4 w-4 text-white" />,
+      icon: <BadgeCheck className="h-4 w-4 text-white" />,
     },
     {
       name: "Contact",
