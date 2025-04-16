@@ -48,7 +48,7 @@ export default function Home() {
       <Projects />
       <RecentProjects></RecentProjects>
       <Skills />
-      <WhatIDO></WhatIDO>
+      {/* <WhatIDO></WhatIDO> */}
       <Approach></Approach>
       <Contact></Contact>
       <Footer></Footer>
