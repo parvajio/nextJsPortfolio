@@ -1,4 +1,3 @@
-import About from "@/components/About";
 import Approach from "@/components/Approch";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -8,7 +7,7 @@ import RecentProjects from "@/components/RecentProjects";
 import Skills from "@/components/Skills";
 import { FloatingNav } from "@/components/ui/floating-navbar";
 import WhatIDO from "@/components/WhatIDO";
-import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
+import { IconHome, IconMessage } from "@tabler/icons-react";
 import { BadgeCheck, Folder } from "lucide-react";
 
 export default function Home() {
