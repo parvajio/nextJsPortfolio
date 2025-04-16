@@ -25,7 +25,7 @@ export default function Home() {
     {
       name: "Projects",
       link: "#projects",
-      icon: <IconUser className="h-4 w-4 text-white" />,
+      icon: <I className="h-4 w-4 text-white" />,
     },
     {
       name: "Skills",
@@ -44,11 +44,11 @@ export default function Home() {
     <main className="relative bg-black-100 flex justify-center items-center flex-col mx-auto">
       <FloatingNav navItems={navItems}></FloatingNav>
       <Hero />
-      <About />
+      {/* <About /> */}
       <Projects />
       <RecentProjects></RecentProjects>
       <Skills />
-      {/* <WhatIDO></WhatIDO> */}
+      <WhatIDO></WhatIDO>
       <Approach></Approach>
       <Contact></Contact>
       <Footer></Footer>
