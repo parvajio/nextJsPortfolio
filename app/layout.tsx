@@ -18,6 +18,9 @@ export const metadata: Metadata = {
   title: "Parvaj's Portfolio",
   description:
     "Md. Parvaj Mosharof – a passionate web developer skilled in JavaScript, React, Node.js, and modern web technologies. Explore my projects, skills, and experiences in web development, competitive programming, and software engineering.",
+    icons:{
+      icon: "/favicon.png",
+    },
 };
 
 export default function RootLayout({
