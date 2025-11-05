@@ -12,7 +12,7 @@ const Mail = () => {
     {
       id: "email",
       icon: <MailIcon className="w-5 h-5" />,
-      value: "mdparvajmosharof17@gmail.com",
+      value: "parvajio25@gmail.com",
       label: "Email",
     },
     {
